@@ -47,10 +47,159 @@
     </nav>
 
     <form>
-       <label for="zoeken">Zoek een tekenmethode</label>
-       <input type="search" id="zoeken" name="zoeken" placeholder="Zoeken">
+      <label for="zoeken">Zoek een tekenmethode</label>
+      <input type="search" id="zoeken" name="zoeken" placeholder="Zoeken">
     </form>
 
+    <button type="button">
+      <img src="assets/sorteren.svg" alt="Sorteren">
+    </button>
+
+    <!--Deze ul wordt een flexbox die horizontaal scrollt, met overflow-x: auto-->
+    <ul  aria-label="filters" class="filters">
+      <li>
+        <button type="button">
+          <img src="assets/alles.svg" alt="">
+          Bekijk alles
+        </button>
+      </li>
+
+      <li>
+        <button type="button">
+          <img src="assets/op-vraag.svg" alt="">
+          Op vraag
+        </button>
+      </li>
+
+      <li>
+        <button type="button">
+          <img src="assets/reflecteren.svg" alt="">
+          Leren over jezelf en Reflecteren
+        </button>
+      </li>
+
+      <li>
+        <button type="button">
+          <img src="assets/onderzoeken.svg" alt="">
+          Onderzoeken en Begrijpen
+        </button>
+      </li>
+
+      <li>
+        <button type="button">
+          <img src="assets/creatief-denken.svg" alt="">
+          Creatief denken
+        </button>
+      </li>
+
+      <li>
+        <button type="button">
+          <img src="assets/organiseren.svg" alt="">
+          Organiseren en Plannen
+        </button>
+      </li>
+
+      <li>
+        <button type="button">
+          <img src="assets/communiceren.svg" alt="">
+          Communiceren en Presenteren
+        </button>
+      </li>
+
+      <li>
+        <button type="button">
+          <img src="assets/leren-over-anderen.svg" alt="">
+          Leren over anderen
+        </button>
+      </li>
+
+    </ul>
+
+
+    <section>
+      <h2>Leren over jezelf en Reflecteren</h2>
+
+      <!-- Deze ul wordt een grid van 2 kolommen -->
+      <ul aria-label="Tekenmethodes" class="details tekenmethodes">
+
+        <!-- De videokaart loopt over beide kolommen: grid-column 1 / -1 -->
+        <li>
+          <a href="#">
+            <img src="assets/video-activiteiten.svg" alt="Video over activiteiten, uitdagingen en doelen">
+          </a>
+
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/roadmap.svg" alt="">
+            <h3>Roadmap</h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/cirkel-gezichtspunten.svg" alt="">
+            <h3>Cirkel van gezichtspunten</h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/over-5-jaar.svg" alt="">
+            <h3>Over 5 jaar</h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/diversiteitscirkel.svg" alt="">
+            <h3>Diversiteitscirkel</h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/metafoor.svg" alt="">
+            <h3>Metafoor</h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/kwaliteiten-tekenen.svg" alt="">
+            <h3>Kwaliteiten tekenen</h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/stroomschema.svg" alt="">
+            <h3>stroomschema</h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/mijn-gebruiksaanwijzing.svg" alt="">
+            <h3>Mijn gebruiksaanwijzing</h3>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <img src="assets/stop-start-doorgaan.svg" alt="">
+            <h3>Stop-start-doorgaan</h3>
+          </a>
+        </li>
+
+      </ul>
+
+      <p>
+        Welke methodes kan ik gebruiken om een reflectief vakproces visueel te maken?
+      </p>
+
+    </section>
   </main>
 
 </body>
