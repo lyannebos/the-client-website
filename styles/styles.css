@@ -1,1 +1,197 @@
-/* CSS */
+/* CUSTOM PROPERTIES */
+:root {
+    /* fonts */
+    --font-titels: "rigid-square", sans-serif;
+    --font-tekst: "Yrsa", serif;
+
+    /* kleuren (geschat, check in Figma) */
+    --tekst-kleur: #1d1a4d;
+    --achtergrond: #f3f3f5;
+    --lijn: #d8d8dd;
+    --accent: #f5b945;
+}
+
+
+/* ALGEMENE STIJLEN */
+body {
+    margin: 0;
+    font-family: var(--font-tekst);
+    color: var(--tekst-kleur);
+    background-color: var(--achtergrond);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-titels);
+    font-weight: 700;
+}
+
+
+/* DE HEADER */
+header {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em;
+}
+
+/* logo: duwt alles wat erna komt naar rechts */
+.logo {
+    margin-right: auto;
+    
+}
+
+.logo img {
+  display: block;
+  width: 3.5em;
+  height: auto;
+}
+
+/* knoppen in de header: standaard knopstijl weghalen */
+header button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* alle icoontjes in de header even groot */
+header button img,
+.account img,
+.favorieten img {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+
+
+/* MENU BUTTON */
+.menu-button {
+    position: relative;
+    z-index: 100;
+    
+}
+
+/* als menu open is: kruisje tonen */
+header:has(.is-open) .menu-button img {
+    content: url(../assets/kruisje.svg);
+}
+
+
+
+/* HET HOOFDMENU */
+.hoofdmenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 7em 1em 1em;
+    background-color: var(--achtergrond);
+    translate: 100% 0%;
+    transition: translate .3s;
+   
+}
+
+/* als menu open is */
+.hoofdmenu.is-open {
+    translate: 0% 0%;
+    
+}
+
+.hoofdmenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 2em;
+    text-align: center;
+}
+
+.hoofdmenu a {
+    color: var(--tekst-kleur);
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+
+/* MATERIAAL INDIENEN    */
+/* gedeelde stijl voor mobiel en desktop */
+.materiaal,
+.materiaal-mobiel a {
+    padding: .75em 1.5em;
+    background-color: var(--accent);
+    color: var(--tekst-kleur);
+    text-decoration: none;
+    font-family: var(--font-titels);
+    font-weight: 700;
+}
+
+.materiaal-mobiel a {
+    display: inline-block;
+}
+
+/* desktopknop: op mobiel verbergen */
+.materiaal {
+    display: none;
+}
+
+
+
+
+/* BREADCRUMB EN PAGINERING */
+.breadcrumb .active,
+.pages .active {
+    font-weight: 700;
+}
+
+
+
+
+/* DESKTOP: als de browser minimaal 60em breed is */
+@media (min-width: 60em) {
+
+    /* header */
+    header {
+        padding: 1.5em 1em;
+        border-bottom: 1px solid var(--lijn);
+    }
+
+    .logo {
+        margin-right: 3em;
+    }
+
+    /* hamburger en mobiele knop weg, desktopknop tonen */
+    .menu-button,
+    .materiaal-mobiel {
+        display: none;
+    }
+
+    .materiaal {
+        display: block;
+    }
+
+    /* hoofdmenu in een rij */
+    .hoofdmenu {
+        position: static;
+        translate: unset;
+        padding: 0;
+        background: none;
+        transition: none;
+        flex: 1;
+       
+    }
+
+    .hoofdmenu ul {
+        display: flex;
+        align-items: center;
+        gap: 2.5em;
+    }
+
+    .hoofdmenu a {
+        font-size: 1em;
+    }
+}
